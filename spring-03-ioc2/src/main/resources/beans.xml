@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--    <bean id="user" class="com.jingyang.pojo.User">-->
+<!--        <constructor-arg index="0" value="jingyang say java"/>-->
+<!--    </bean>-->
+
+    <!-- 通过 类型创建 不建议使用 -->
+<!--    <bean id="user" class="com.jingyang.pojo.User">-->
+<!--        <constructor-arg type="java.lang.String" value="jing yang"/>-->
+<!--    </bean>-->
+<!--    直接通过参数名设置-->
+    <bean id="user" class="com.jingyang.pojo.User">
+        <constructor-arg name="name" value="jing yang"/>
+    </bean>
+
+    <!--
+    id: bean的唯一标识符，也就是相当于我们的对象名
+    class: bean 对象所对应的权限对名：包名+对象名
+    name: 也是别名，而且namek可以同时取多个别名
+
+    -->
+    <bean id="user2" class="com.jingyang.pojo.User2">
+
+    </bean>
+
+    <!-- 别名 -->
+    <alias name="user" alias="u1"/>
+</beans>
